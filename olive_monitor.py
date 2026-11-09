@@ -130,3 +130,7 @@ def main():
         post_slack(f"✅ [올리브영 {ts}] 상품 {len(GOODS)}개 체크했으나 변경점이 없습니다. (재고 확인 {checked}개, 랭킹 {len(rankings)}개)")
         log("변화 없음 → 슬랙 알림 전송")
     log("끝")
+
+
+if __name__ == "__main__":
+    main()
