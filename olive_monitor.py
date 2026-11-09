@@ -31,7 +31,7 @@ DEFAULT_GOODS = (
     "A000000267402,A000000267403,A000000268404"
 )
 
-WEBHOOK = os.environ.get("SLACK_WEBHOOK_URL", "SLACK_WEBHOOK_URL", "https://hooks.slack.com/services/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")
+WEBHOOK = os.environ.get("SLACK_WEBHOOK_URL", "")
 RAW_GOODS = os.environ.get("GOODS_NO") or DEFAULT_GOODS
 GOODS = list(dict.fromkeys(g.strip() for g in RAW_GOODS.split(",") if g.strip()))
 ALWAYS = os.environ.get("ALWAYS_NOTIFY") == "1"
