@@ -41,6 +41,7 @@ RAW_GOODS = os.environ.get("GOODS_NO") or DEFAULT_GOODS
 GOODS = list(dict.fromkeys(g.strip() for g in RAW_GOODS.split(",") if g.strip()))
 ALWAYS = os.environ.get("ALWAYS_NOTIFY") == "1"
 DEFAULT_RANK = "전체|https://www.oliveyoung.co.kr/store/main/getBestList.do,스킨케어|https://www.oliveyoung.co.kr/store/main/getBestList.do?dispCatNo=900000100100001&fltDispCatNo=10000010001&pageIdx=1&rowsPerPage=100,클렌징|https://www.oliveyoung.co.kr/store/main/getBestList.do?dispCatNo=900000100100001&fltDispCatNo=10000010010&pageIdx=1&rowsPerPage=100,메이크업|https://www.oliveyoung.co.kr/store/main/getBestList.do?dispCatNo=900000100100001&fltDispCatNo=10000010002&pageIdx=1&rowsPerPage=100,푸드|https://www.oliveyoung.co.kr/store/main/getBestList.do?dispCatNo=900000100100001&fltDispCatNo=10000020002&pageIdx=1&rowsPerPage=100,맨즈|https://www.oliveyoung.co.kr/store/main/getBestList.do?dispCatNo=900000100100001&fltDispCatNo=10000060002&pageIdx=1&rowsPerPage=100"
+STATE_FILE = Path(__file__).with_name("olive_state.json")
 SLACK_CHUNK = 3000  # 슬랙 메시지 한 번에 보낼 대략적 글자 수
 
 UA = (
